@@ -253,6 +253,8 @@
 <li><a href="#搭建hogo博客">搭建Hogo博客</a></li>
 <li><a href="#修改默认配置">修改默认配置</a></li>
 <li><a href="#编辑博文-提交修改">编辑博文&amp;&amp;提交修改</a></li>
+<li><a href="#部署博客网站">部署博客网站</a></li>
+<li><a href="#自动部署脚本">自动部署脚本</a></li>
 </ul>
 </nav>
 
@@ -342,6 +344,36 @@ git commit -m &quot;YOUR COMMIT MESSAGE&quot;
 git push origin master
 </code>
 &gt; 如果有账号权限问题，说明之前没有配置ssh，可以参考<a href="https://www.awaimai.com/2200.html">这篇博客</a>配置</li>
+</ul>
+
+<h1 id="部署博客网站">部署博客网站</h1>
+
+<p>这一步很关键，就是生成hugo静态页面，并push到我们的github.io上去
+- 添加github.io到blogs下的public目录里</p>
+
+<pre><code class="language-sh">git submodule add -b master git@github.com:rical730/rical730.github.io.git public
+</code></pre>
+
+<ul>
+<li>生成静态网站，该命令直接生成静态文件到public文件夹下
+<code>sh
+hugo
+</code></li>
+<li>提交
+<code>sh
+cd public
+git add .
+git commit -m &quot;YOUR COMMIT MESSAGE&quot;
+git push origin master
+</code></li>
+<li>查看你的github.io网站：<code>https://rical730.github.io</code></li>
+</ul>
+
+<h1 id="自动部署脚本">自动部署脚本</h1>
+
+<ul>
+<li>为了方便部署，Hugo提供了一个<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script">自动部署的脚本</a></li>
+<li>这里有一份<a href="https://github.com/rical730/blogs/blob/master/git_ci.sh">自动脚本</a>可以同时提交两个repo</li>
 </ul>
               
             </div>
