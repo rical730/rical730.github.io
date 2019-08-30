@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.54.0 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="rical">
+<meta name="keywords" content="github.io, hugo">
+<meta name="description" content="从开始写博客到现在，CSDN和简书都试过，但还是想建立一个自己的博客网站，可是又嫌维护服务器麻烦，github.io简直是完美选择，没想到还可以个性化定制主题，于是果断种草。">
+
+
+<meta property="og:description" content="从开始写博客到现在，CSDN和简书都试过，但还是想建立一个自己的博客网站，可是又嫌维护服务器麻烦，github.io简直是完美选择，没想到还可以个性化定制主题，于是果断种草。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何像本博客一样搭建github.io">
+<meta name="twitter:title" content="如何像本博客一样搭建github.io">
+<meta property="og:url" content="https://rical730.github.io/2019/08/%E5%A6%82%E4%BD%95%E5%83%8F%E6%9C%AC%E5%8D%9A%E5%AE%A2%E4%B8%80%E6%A0%B7%E6%90%AD%E5%BB%BAgithub.io/">
+<meta property="twitter:url" content="https://rical730.github.io/2019/08/%E5%A6%82%E4%BD%95%E5%83%8F%E6%9C%AC%E5%8D%9A%E5%AE%A2%E4%B8%80%E6%A0%B7%E6%90%AD%E5%BB%BAgithub.io/">
+<meta property="og:site_name" content="RICAL">
+<meta property="og:description" content="从开始写博客到现在，CSDN和简书都试过，但还是想建立一个自己的博客网站，可是又嫌维护服务器麻烦，github.io简直是完美选择，没想到还可以个性化定制主题，于是果断种草。">
+<meta name="twitter:description" content="从开始写博客到现在，CSDN和简书都试过，但还是想建立一个自己的博客网站，可是又嫌维护服务器麻烦，github.io简直是完美选择，没想到还可以个性化定制主题，于是果断种草。">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2019-08-30T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2019-08-30T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="工具">
+    
+  
+  
+    
+      <meta property="article:tag" content="github">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/welcome-to-tranquilpeak/city-750.jpg">
+  <meta property="twitter:image" content="//d1u9biwaxjngwg.cloudfront.net/welcome-to-tranquilpeak/city-750.jpg">
+
+
+  <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/welcome-to-tranquilpeak/city.jpg">
+  <meta property="twitter:image" content="//d1u9biwaxjngwg.cloudfront.net/welcome-to-tranquilpeak/city.jpg">
+
+
+
+
+  <meta property="og:image" content="https://rical730.github.io/img/conf/avatar.png">
+  <meta property="twitter:image" content="https://rical730.github.io/img/conf/avatar.png">
+
+
+    <title>如何像本博客一样搭建github.io</title>
+
+    <link rel="icon" href="https://rical730.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://rical730.github.io/2019/08/%E5%A6%82%E4%BD%95%E5%83%8F%E6%9C%AC%E5%8D%9A%E5%AE%A2%E4%B8%80%E6%A0%B7%E6%90%AD%E5%BB%BAgithub.io/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://rical730.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://rical730.github.io/">RICAL</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://rical730.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://rical730.github.io/img/conf/avatar.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://rical730.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://rical730.github.io/img/conf/avatar.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">rical</h4>
+        
+          <h5 class="sidebar-profile-bio">漫漫长夜等待黎明</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://rical730.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://rical730.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://rical730.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://rical730.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://rical730.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/rical730" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              "
+       style="background-image:url('//d1u9biwaxjngwg.cloudfront.net/welcome-to-tranquilpeak/city.jpg')"
+       data-behavior="5">
+    
+      <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      如何像本博客一样搭建github.io
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-08-30T00:00:00Z">
+        
+  August 30, 2019
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://rical730.github.io/categories/%e5%b7%a5%e5%85%b7">工具</a>
+    
+  
+
+  </div>
+
+</div>
+    
+  </div>
+
+
+      <div id="main" data-behavior="5"
+        class="hasCover
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>从开始写博客到现在，CSDN和简书都试过，但还是想建立一个自己的博客网站，可是又嫌维护服务器麻烦，github.io简直是完美选择，没想到还可以个性化定制主题，于是果断种草。</p>
+
+<h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+<ul>
+<li><a href="#准备工作">准备工作</a></li>
+<li><a href="#搭建hogo博客">搭建Hogo博客</a></li>
+<li><a href="#修改默认配置">修改默认配置</a></li>
+<li><a href="#编辑博文-提交修改">编辑博文&amp;&amp;提交修改</a></li>
+</ul>
+</nav>
+
+<h1 id="准备工作">准备工作</h1>
+
+<!--[![Join the chat at https://gitter.im/LouisBarranqueiro/hexo-theme-tranquilpeak](https://badges.gitter.im/Join%20Chat.svg)](http s://gitter.im/LouisBarranqueiro/hexo-theme-tranquilpeak?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)-->
+
+<ul>
+<li>拥有一个自己的GitHub账号。[<a href="https://github.com">GitHub地址</a>]</li>
+<li>创建一个名为<code>&lt;yourusername&gt;.github.io</code>的仓库。[<a href="https://blog.csdn.net/Tang_Chuanlin/article/details/83626545">参考博客</a>: 不需要配置github默认的主题]</li>
+<li>创建一个名为<code>blogs</code>的仓库：准备存放hugo生成的静态网站数据。</li>
+</ul>
+
+<blockquote>
+<p>本博客参考<a href="https://keysaim.github.io/post/blog/deploy-hugo-blog-in-github.io/">如何在github.io搭建Hugo博客站</a></p>
+</blockquote>
+
+<h1 id="搭建hogo博客">搭建Hogo博客</h1>
+
+<ul>
+<li><p><strong>Step1: 安装Hugo</strong>: (在mac上运行)</p>
+
+<pre><code class="language-sh">brew install hugo
+</code></pre></li>
+
+<li><p><strong>Step2: 在本地建站并关联自己存放博客文件的仓库</strong>：<code>blogs</code>就是自己建的那个仓库</p>
+
+<pre><code class="language-sh">hugo new site blogs
+cd blogs
+git init
+git remote add origin git@github.com:rical730/blogs.git
+</code></pre></li>
+
+<li><p><strong>Step3: 添加一个Hugo主题</strong></p>
+
+<ul>
+<li>Hugo官方有非常多免费开源的主题，<a href="https://themes.gohugo.io/">快去挑选一下</a></li>
+<li>本文选用的主题：<a href="https://themes.gohugo.io/hugo-tranquilpeak-theme/">tranquilpeak</a></li>
+<li>推荐几个我喜欢的其他主题
+
+<ul>
+<li>写书专用：<a href="https://themes.gohugo.io/hugo-theme-techdoc/">techdoc</a></li>
+<li>简历专用：<a href="https://themes.gohugo.io/hugo-resume/">resume</a></li>
+<li>码农专用：<a href="https://themes.gohugo.io/hugo-theme-nix/">nix</a></li>
+</ul></li>
+<li>添加方式
+<code>sh
+git submodule add -b master https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/hugo-tranquilpeak-theme
+</code></li>
+<li>拷贝模板
+<code>sh
+cp -r themes/hugo-tranquilpeak-theme/exampleSite/* ./
+</code></li>
+</ul></li>
+
+<li><p><strong>Step4: 本地测试</strong>: 在根目录下</p>
+
+<pre><code class="language-sh">hugo server
+</code></pre>
+
+<p>然后本地浏览器打开：<code>http://localhost:1313</code>，就可以开始改造你的博客了。</p></li>
+</ul>
+
+<p>如果想热编辑（就是修改后Ctrl+s可以直接看博客效果的话，可使用</p>
+
+<pre><code class="language-sh">hugo server --disableFastRender
+</code></pre>
+
+<h1 id="修改默认配置">修改默认配置</h1>
+
+<p><code>Hugo</code>默认配置文件是<code>config.toml</code>，配置都比较显而易见，有几个重要配置可以改一下。</p>
+
+<ol>
+<li>修改<code>baseURL</code>: 改成你的博客最终部署的url，比如<code>https://rical730.github.io/</code></li>
+<li>修改<code>paginate</code>: 首页每页博文数量显示</li>
+<li>修改<code>languageCode</code>: 如果网站要显示成中文，要修改为<code>zh-cn</code></li>
+</ol>
+
+<h1 id="编辑博文-提交修改">编辑博文&amp;&amp;提交修改</h1>
+
+<ul>
+<li>默认情况下，博文放在content/post/下面，可以新建目录编辑</li>
+<li>编写完成后，本地查看下没什么问题，先提交到管理博客的仓库<code>blogs</code>里：
+<code>
+git add ./*
+git commit -m &quot;YOUR COMMIT MESSAGE&quot;
+git push origin master
+</code>
+&gt; 如果有账号权限问题，说明之前没有配置ssh，可以参考<a href="https://www.awaimai.com/2200.html">这篇博客</a>配置</li>
+</ul>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://rical730.github.io/tags/github/">github</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2019 rical. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://rical730.github.io/img/conf/avatar.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">rical</h4>
+    
+      <div id="about-card-bio">漫漫长夜等待黎明</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        程序媛
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://rical730.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://rical730.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/rical730.github.io\/2019\/08\/%E5%A6%82%E4%BD%95%E5%83%8F%E6%9C%AC%E5%8D%9A%E5%AE%A2%E4%B8%80%E6%A0%B7%E6%90%AD%E5%BB%BAgithub.io\/';
+          
+            this.page.identifier = '\/2019\/08\/%E5%A6%82%E4%BD%95%E5%83%8F%E6%9C%AC%E5%8D%9A%E5%AE%A2%E4%B8%80%E6%A0%B7%E6%90%AD%E5%BB%BAgithub.io\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
