@@ -31,7 +31,7 @@
   
   
     
-      <meta property="article:section" content="工具">
+      <meta property="article:section" content="实用工具">
     
   
   
@@ -90,7 +90,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="5">
+      <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://rical730.github.io/">RICAL</a>
@@ -110,7 +110,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="5">
+      <nav id="sidebar" data-behavior="4">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -203,7 +203,7 @@
               text-center
               "
        style="background-image:url('//d1u9biwaxjngwg.cloudfront.net/welcome-to-tranquilpeak/city.jpg')"
-       data-behavior="5">
+       data-behavior="4">
     
       <div class="post-header main-content-wrap text-center">
   
@@ -225,7 +225,7 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://rical730.github.io/categories/%e5%b7%a5%e5%85%b7">工具</a>
+      <a class="category-link" href="https://rical730.github.io/categories/%e5%ae%9e%e7%94%a8%e5%b7%a5%e5%85%b7">实用工具</a>
     
   
 
@@ -236,7 +236,7 @@
   </div>
 
 
-      <div id="main" data-behavior="5"
+      <div id="main" data-behavior="4"
         class="hasCover
                hasCoverMetaIn
                ">
@@ -255,6 +255,7 @@
 <li><a href="#编辑博文-提交修改">编辑博文&amp;&amp;提交修改</a></li>
 <li><a href="#部署博客网站">部署博客网站</a></li>
 <li><a href="#自动部署脚本">自动部署脚本</a></li>
+<li><a href="#todo">toDo</a></li>
 </ul>
 </nav>
 
@@ -262,15 +263,15 @@
 
 <!--[![Join the chat at https://gitter.im/LouisBarranqueiro/hexo-theme-tranquilpeak](https://badges.gitter.im/Join%20Chat.svg)](http s://gitter.im/LouisBarranqueiro/hexo-theme-tranquilpeak?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)-->
 
+<blockquote>
+<p>本博客参考<a href="https://keysaim.github.io/post/blog/deploy-hugo-blog-in-github.io/">如何在github.io搭建Hugo博客站</a></p>
+</blockquote>
+
 <ul>
 <li>拥有一个自己的GitHub账号。[<a href="https://github.com">GitHub地址</a>]</li>
 <li>创建一个名为<code>&lt;yourusername&gt;.github.io</code>的仓库。[<a href="https://blog.csdn.net/Tang_Chuanlin/article/details/83626545">参考博客</a>: 不需要配置github默认的主题]</li>
 <li>创建一个名为<code>blogs</code>的仓库：准备存放hugo生成的静态网站数据。</li>
 </ul>
-
-<blockquote>
-<p>本博客参考<a href="https://keysaim.github.io/post/blog/deploy-hugo-blog-in-github.io/">如何在github.io搭建Hugo博客站</a></p>
-</blockquote>
 
 <h1 id="搭建hogo博客">搭建Hogo博客</h1>
 
@@ -300,28 +301,31 @@ git remote add origin git@github.com:rical730/blogs.git
 <li>简历专用：<a href="https://themes.gohugo.io/hugo-resume/">resume</a></li>
 <li>码农专用：<a href="https://themes.gohugo.io/hugo-theme-nix/">nix</a></li>
 </ul></li>
-<li>添加方式
-<code>sh
-git submodule add -b master https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/hugo-tranquilpeak-theme
-</code></li>
-<li>拷贝模板
-<code>sh
-cp -r themes/hugo-tranquilpeak-theme/exampleSite/* ./
-</code></li>
+<li>添加方式</li>
 </ul></li>
-
-<li><p><strong>Step4: 本地测试</strong>: 在根目录下</p>
-
-<pre><code class="language-sh">hugo server
-</code></pre>
-
-<p>然后本地浏览器打开：<code>http://localhost:1313</code>，就可以开始改造你的博客了。</p></li>
 </ul>
 
-<p>如果想热编辑（就是修改后Ctrl+s可以直接看博客效果的话，可使用</p>
+<pre><code class="language-sh">git submodule add -b master https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/hugo-tranquilpeak-theme
+cp -r themes/hugo-tranquilpeak-theme/exampleSite/* ./
+</code></pre>
+
+<ul>
+<li><p><strong>Step4: 本地测试</strong>:</p>
+
+<ul>
+<li><p>在根目录下</p>
+
+<pre><code class="language-sh">hugo server
+</code></pre></li>
+
+<li><p>然后本地浏览器打开：<code>http://localhost:1313</code>，就可以开始改造你的博客了。</p></li>
+
+<li><p>如果想热编辑（就是修改后Ctrl+s可以直接看博客效果的话，可使用</p>
 
 <pre><code class="language-sh">hugo server --disableFastRender
-</code></pre>
+</code></pre></li>
+</ul></li>
+</ul>
 
 <h1 id="修改默认配置">修改默认配置</h1>
 
@@ -338,36 +342,40 @@ cp -r themes/hugo-tranquilpeak-theme/exampleSite/* ./
 <ul>
 <li>默认情况下，博文放在content/post/下面，可以新建目录编辑</li>
 <li>编写完成后，本地查看下没什么问题，先提交到管理博客的仓库<code>blogs</code>里：
-<code>
+<code>sh
 git add ./*
 git commit -m &quot;YOUR COMMIT MESSAGE&quot;
 git push origin master
-</code>
-&gt; 如果有账号权限问题，说明之前没有配置ssh，可以参考<a href="https://www.awaimai.com/2200.html">这篇博客</a>配置</li>
+</code></li>
 </ul>
+
+<blockquote>
+<p>如果有账号权限问题，说明之前没有配置ssh，可以参考<a href="https://www.awaimai.com/2200.html">这篇博客</a>配置</p>
+</blockquote>
 
 <h1 id="部署博客网站">部署博客网站</h1>
 
-<p>这一步很关键，就是生成hugo静态页面，并push到我们的github.io上去
-- 添加github.io到blogs下的public目录里</p>
+<p>这一步很关键，就是生成hugo静态页面，并push到我们的github.io上去</p>
+
+<p>首先添加github.io到blogs下的public目录里</p>
 
 <pre><code class="language-sh">git submodule add -b master git@github.com:rical730/rical730.github.io.git public
 </code></pre>
 
-<ul>
-<li>生成静态网站，该命令直接生成静态文件到public文件夹下
-<code>sh
-hugo
-</code></li>
-<li>提交
-<code>sh
-cd public
+<p>生成静态网站，该命令直接生成静态文件到public文件夹下</p>
+
+<pre><code class="language-sh">hugo
+</code></pre>
+
+<p>提交</p>
+
+<pre><code class="language-sh">cd public
 git add .
 git commit -m &quot;YOUR COMMIT MESSAGE&quot;
 git push origin master
-</code></li>
-<li>查看你的github.io网站：<code>https://rical730.github.io</code></li>
-</ul>
+</code></pre>
+
+<p>查看你的github.io网站：<code>https://rical730.github.io</code></p>
 
 <h1 id="自动部署脚本">自动部署脚本</h1>
 
@@ -375,6 +383,12 @@ git push origin master
 <li>为了方便部署，Hugo提供了一个<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script">自动部署的脚本</a></li>
 <li>这里有一份<a href="https://github.com/rical730/blogs/blob/master/git_ci.sh">自动脚本</a>可以同时提交两个repo</li>
 </ul>
+
+<h1 id="todo">toDo</h1>
+
+<ol>
+<li>给自己的博客系统添加评论系统。参见<a href="https://keysaim.github.io/post/2017-08-16-how-to-add-comments/">如何给自己的博客网站加入评论系统</a></li>
+</ol>
               
             </div>
           </div>
@@ -399,7 +413,7 @@ git push origin master
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://rical730.github.io/2019/08/%E5%9F%8E%E5%8D%97%E6%97%A7%E5%8D%9A/" data-tooltip="城南旧博">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -452,7 +466,7 @@ git push origin master
 </footer>
 
       </div>
-      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
         <div class="post-actions-wrap">
   
       <nav >
@@ -460,7 +474,7 @@ git push origin master
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://rical730.github.io/2019/08/%E5%9F%8E%E5%8D%97%E6%97%A7%E5%8D%9A/" data-tooltip="城南旧博">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -498,7 +512,7 @@ git push origin master
 </div>
 
       </div>
-      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
   <i id="btn-close-shareoptions" class="fa fa-close"></i>
   <ul class="share-options">
     
